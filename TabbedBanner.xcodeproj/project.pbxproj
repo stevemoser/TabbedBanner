@@ -17,12 +17,9 @@
 		3129166B1728322D00125518 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129166A1728322D00125518 /* Default@2x.png */; };
 		3129166D1728322D00125518 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129166C1728322D00125518 /* Default-568h@2x.png */; };
 		312916701728322D00125518 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3129166E1728322D00125518 /* MainStoryboard.storyboard */; };
-		312916731728322D00125518 /* SMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312916721728322D00125518 /* SMFirstViewController.m */; };
-		312916751728322D00125518 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 312916741728322D00125518 /* first.png */; };
-		312916771728322D00125518 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 312916761728322D00125518 /* first@2x.png */; };
-		3129167A1728322D00125518 /* SMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312916791728322D00125518 /* SMSecondViewController.m */; };
-		3129167C1728322D00125518 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129167B1728322D00125518 /* second.png */; };
-		3129167E1728322D00125518 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3129167D1728322D00125518 /* second@2x.png */; };
+		312916851728324000125518 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312916841728324000125518 /* iAd.framework */; };
+		3129168A17283AC900125518 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3129168717283AC900125518 /* BannerViewController.m */; };
+		3129168B17283AC900125518 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3129168917283AC900125518 /* TextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +37,11 @@
 		3129166A1728322D00125518 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3129166C1728322D00125518 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3129166F1728322D00125518 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		312916711728322D00125518 /* SMFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFirstViewController.h; sourceTree = "<group>"; };
-		312916721728322D00125518 /* SMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFirstViewController.m; sourceTree = "<group>"; };
-		312916741728322D00125518 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		312916761728322D00125518 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		312916781728322D00125518 /* SMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSecondViewController.h; sourceTree = "<group>"; };
-		312916791728322D00125518 /* SMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSecondViewController.m; sourceTree = "<group>"; };
-		3129167B1728322D00125518 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		3129167D1728322D00125518 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		312916841728324000125518 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		3129168617283AC900125518 /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		3129168717283AC900125518 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		3129168817283AC900125518 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		3129168917283AC900125518 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312916851728324000125518 /* iAd.framework in Frameworks */,
 				312916571728322D00125518 /* UIKit.framework in Frameworks */,
 				312916591728322D00125518 /* Foundation.framework in Frameworks */,
 				3129165B1728322D00125518 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +62,7 @@
 		3129164A1728322D00125518 = {
 			isa = PBXGroup;
 			children = (
+				312916841728324000125518 /* iAd.framework */,
 				3129165C1728322D00125518 /* TabbedBanner */,
 				312916551728322D00125518 /* Frameworks */,
 				312916541728322D00125518 /* Products */,
@@ -94,17 +90,13 @@
 		3129165C1728322D00125518 /* TabbedBanner */ = {
 			isa = PBXGroup;
 			children = (
+				3129168617283AC900125518 /* BannerViewController.h */,
+				3129168717283AC900125518 /* BannerViewController.m */,
+				3129168817283AC900125518 /* TextViewController.h */,
+				3129168917283AC900125518 /* TextViewController.m */,
 				312916651728322D00125518 /* SMAppDelegate.h */,
 				312916661728322D00125518 /* SMAppDelegate.m */,
 				3129166E1728322D00125518 /* MainStoryboard.storyboard */,
-				312916711728322D00125518 /* SMFirstViewController.h */,
-				312916721728322D00125518 /* SMFirstViewController.m */,
-				312916741728322D00125518 /* first.png */,
-				312916761728322D00125518 /* first@2x.png */,
-				312916781728322D00125518 /* SMSecondViewController.h */,
-				312916791728322D00125518 /* SMSecondViewController.m */,
-				3129167B1728322D00125518 /* second.png */,
-				3129167D1728322D00125518 /* second@2x.png */,
 				3129165D1728322D00125518 /* Supporting Files */,
 			);
 			path = TabbedBanner;
@@ -181,10 +173,6 @@
 				3129166B1728322D00125518 /* Default@2x.png in Resources */,
 				3129166D1728322D00125518 /* Default-568h@2x.png in Resources */,
 				312916701728322D00125518 /* MainStoryboard.storyboard in Resources */,
-				312916751728322D00125518 /* first.png in Resources */,
-				312916771728322D00125518 /* first@2x.png in Resources */,
-				3129167C1728322D00125518 /* second.png in Resources */,
-				3129167E1728322D00125518 /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +185,8 @@
 			files = (
 				312916631728322D00125518 /* main.m in Sources */,
 				312916671728322D00125518 /* SMAppDelegate.m in Sources */,
-				312916731728322D00125518 /* SMFirstViewController.m in Sources */,
-				3129167A1728322D00125518 /* SMSecondViewController.m in Sources */,
+				3129168A17283AC900125518 /* BannerViewController.m in Sources */,
+				3129168B17283AC900125518 /* TextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

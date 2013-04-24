@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2837" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1921"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier First View Controller - First-->
+        <!--Banner View Controller - First-->
+        <scene sceneID="Gzy-qe-6Br">
+            <objects>
+                <viewController id="YEj-Ae-qtN" customClass="BannerViewController" sceneMemberID="viewController">
+                    <containerView key="view" contentMode="scaleToFill" id="npK-aC-vbn">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <segue destination="2" kind="embed" identifier="contentSegue" id="2Wa-24-ZqJ"/>
+                        </connections>
+                    </containerView>
+                    <tabBarItem key="tabBarItem" title="First" id="U7Q-tL-XKp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d19-Os-Y1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-280"/>
+        </scene>
+        <!--Text View Controller - First-->
         <scene sceneID="11">
             <objects>
-                <viewController title="First" id="2" customClass="SMFirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="2" customClass="TextViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
@@ -18,37 +36,68 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ykn-cM-kKX">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m49-bx-tba">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Ikv-jk-tyi"/>
+                                    <constraint firstAttribute="width" constant="240" id="9FV-vz-a48"/>
+                                    <constraint firstAttribute="height" constant="255" id="cTn-rC-NtZ"/>
                                 </constraints>
-                                <string key="text">Loaded by the first view controller — an instance of SMFirstViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <mutableString key="text">Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QBg-X6-fBV"/>
                             <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qxj-1L-2Yh"/>
+                            <constraint firstItem="ykn-cM-kKX" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="user" id="RNJ-P2-u4J"/>
                             <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ty9-wx-CyI"/>
-                            <constraint firstItem="21" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zmm-k2-2L7"/>
-                            <constraint firstItem="21" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="40" type="user" id="jX0-Wi-kmb"/>
-                            <constraint firstAttribute="centerY" secondItem="21" secondAttribute="centerY" type="user" id="yWk-L2-m9F"/>
+                            <constraint firstItem="m49-bx-tba" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="VIr-Ch-wFZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ykn-cM-kKX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Y6i-zS-DeF"/>
+                            <constraint firstItem="20" firstAttribute="top" secondItem="ykn-cM-kKX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jci-PM-XxP"/>
+                            <constraint firstItem="ykn-cM-kKX" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qjo-U6-PVe"/>
+                            <constraint firstItem="m49-bx-tba" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="52" id="vX8-LZ-Ddj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="ykn-cM-kKX" id="7vm-D5-NBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="1166" y="-260"/>
         </scene>
-        <!--class Prefix:identifier Second View Controller - Second-->
+        <!--Banner View Controller - Second-->
+        <scene sceneID="PT5-Xm-Yve">
+            <objects>
+                <viewController id="1VW-lw-0QO" customClass="BannerViewController" sceneMemberID="viewController">
+                    <containerView key="view" contentMode="scaleToFill" id="n81-sP-heG">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <segue destination="3" kind="embed" id="lDq-wH-nrE"/>
+                        </connections>
+                    </containerView>
+                    <tabBarItem key="tabBarItem" title="Second" id="hJR-Mz-9NU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPz-Tj-ffL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="425"/>
+        </scene>
+        <!--Text View Controller - Second-->
         <scene sceneID="13">
             <objects>
-                <viewController title="Second" id="3" customClass="SMSecondViewController" sceneMemberID="viewController">
+                <viewController title="Second" id="3" customClass="TextViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
@@ -57,30 +106,43 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wbK-Dy-zFl">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59W-z3-lMX">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="cQR-IW-sY8"/>
+                                    <constraint firstAttribute="width" constant="240" id="QxD-Kg-Ifm"/>
+                                    <constraint firstAttribute="height" constant="255" id="whN-vA-asF"/>
                                 </constraints>
-                                <string key="text">Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <mutableString key="text">Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.Loaded by the second view controller — an instance of SMSecondViewController — specified in the app delegate.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="22" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0q6-IA-e8m"/>
-                            <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fR4-wH-Ih7"/>
-                            <constraint firstItem="23" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fzb-YA-SeR"/>
-                            <constraint firstAttribute="centerY" secondItem="23" secondAttribute="centerY" type="user" id="llH-eD-iPS"/>
+                            <constraint firstItem="59W-z3-lMX" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" type="default" id="1rw-qa-Mha"/>
+                            <constraint firstItem="59W-z3-lMX" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="3zi-a5-Q6v"/>
+                            <constraint firstItem="wbK-Dy-zFl" firstAttribute="top" secondItem="17" secondAttribute="top" constant="20" symbolic="YES" type="user" id="PpD-BN-hUd"/>
+                            <constraint firstItem="wbK-Dy-zFl" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VWC-1z-XEI"/>
                             <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pc3-9Y-W42"/>
-                            <constraint firstItem="23" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="40" type="user" id="yUx-Ee-KEk"/>
+                            <constraint firstAttribute="trailing" secondItem="wbK-Dy-zFl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sko-JC-SzZ"/>
+                            <constraint firstItem="22" firstAttribute="top" secondItem="wbK-Dy-zFl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wKC-IX-YRm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="wbK-Dy-zFl" id="g9C-tN-GJ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="1166" y="425"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -93,8 +155,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="YEj-Ae-qtN" kind="relationship" relationship="viewControllers" id="Psc-0U-dCV"/>
+                        <segue destination="1VW-lw-0QO" kind="relationship" relationship="viewControllers" id="lE3-Mw-Lk3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -106,6 +168,21 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="BannerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BannerViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TextViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="timerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
